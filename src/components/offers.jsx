@@ -1,14 +1,39 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect } from 'react';
 import Button from "@/components/btn"
 import Image from 'next/image';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger)
 
 const Offers = () => {
+
+    useEffect(() => {
+        const ctx= gsap.context(() => {
+            gsap.to(".animated-img", {
+                yPercent: 20,
+                scrollTrigger: {
+                    trigger: '.img-container',
+                    start: "top bottom",
+                    end: "bottom top",
+                    markers: false,
+                    scrub: true,
+                }
+            })
+        })
+        return () => ctx.revert()
+    },[])
+    
+
+
   return (
-    <div className='flex min-h-[60rem] justify-between pt-36 overflow-y-hidden'>
+    <div className='flex min-h-[48rem] justify-between pt-36 overflow-y-hidden'>
 
         <div className='pl-20 pt-20'>
             <div className=''>
-                    <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[16rem] w-[32vh]' />
+                <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[16rem] w-[32vh]' />
             </div>
             <div className='mt-16'>
                 <div className='w-fit px-4 text-[1.5vh] py-1 border border-gray-400 rounded-xl font-body'>
@@ -27,10 +52,13 @@ const Offers = () => {
 
         <div>
 
-            <div className='h-[20rem] relative '>
-                <Image src='/assets/product-with-bg.jpg' width={650} height={500} alt='product' className='z-0' />
+            <div className='h-[100vh] w-[45vw] img-container relative overflow-hidden bg-[#E3D8CB] p-[3.5vw] '>
+                <div className='h-full w-full absolute top-0 left-0 '>
+                <Image src='/assets/product-with-bg.jpg' width={650} height={500} alt='product' className='w-full translate-y-[-10%] h-full object-cover animated-img' />
 
-                <div className='absolute top-20 left-10'>
+                </div>
+
+                <div className='relative z-[2]'>
                 <div className='flex justify-between items-end'>
 
                 <div className='font-body text-neutral-700'>
@@ -48,13 +76,6 @@ const Offers = () => {
                         <p className='underline text-neutral-700 text-xs mt-2 font-body cursor-pointer'>SHOP NOW</p>
                     
                 </div>
-
-                <div>
-                    <p>
-                        
-                    </p>
-                </div>
-
                 </div>
             </div>
             </div>

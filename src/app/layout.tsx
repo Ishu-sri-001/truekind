@@ -1,39 +1,34 @@
 import type { Metadata } from "next";
-import localFont from 'next/font/local'
+import localFont from "next/font/local";
 import "./globals.css";
-
+import LenisSmoothScroll from "@/components/scroll";
 
 const EditorialNewRegular = localFont({
   src: [
     {
-      path: './fonts/EditorialNew-Regular.woff2',
-      weight: '400',
-      style: 'normal', 
+      path: "./fonts/EditorialNew-Regular.woff2",
+      weight: "400",
+      style: "normal",
     },
     //  {
     //   path: './fonts/EditorialNew-Italic.woff2',
     //   weight: '400',
-    //   style: 'normal', 
+    //   style: 'normal',
     // },
   ],
-  variable:"--font-display"
-})
-
-
+  variable: "--font-display",
+});
 
 const PPMoriRegular = localFont({
   src: [
     {
-      path: './fonts/PPMori-Regular.woff2',
-      weight: '200',
-      style: 'normal',
+      path: "./fonts/PPMori-Regular.woff2",
+      weight: "200",
+      style: "normal",
     },
   ],
-   variable:"--font-body"
-
-})
-
-
+  variable: "--font-body",
+});
 
 export const metadata: Metadata = {
   title: "TrueKind",
@@ -46,12 +41,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-         className={`${EditorialNewRegular.variable} ${PPMoriRegular.variable}`}
-      >
-        {children}
-      </body>
-    </html>
+    <>
+      <LenisSmoothScroll />
+      <html lang="en">
+        <body
+          className={`${EditorialNewRegular.variable} ${PPMoriRegular.variable}`}
+        >
+          {children}
+        </body>
+      </html>
+    x`</>
   );
 }

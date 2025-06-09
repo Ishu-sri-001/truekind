@@ -1,7 +1,13 @@
+'use client';
+
 import React from "react";
 import { FlaskRound, MapPinCheckInside } from "lucide-react";
 import Button from "./btn";
 import Image from "next/image";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger)
 
 const Transparency = () => {
   const qualities = [
@@ -20,6 +26,19 @@ const Transparency = () => {
         "Skin care packed with anti oxidants, skinreplenishing and skin restoring agents instable pH levels that don’t promise miracles,but deliver real results.",
     },
   ];
+
+  useEffect (() => {
+      gsap.to(".shades", {
+           y: "-20vw",
+          scrollTrigger: {
+            start: 'top 80%',
+            end: 'bottom top',
+            trigger: ".shades",
+            markers: false,
+            scrub: true
+          }
+      })
+  })
 
   return (
     <div className="h-fit w-full relative py-24">
@@ -50,8 +69,8 @@ const Transparency = () => {
       </div>
 
       <div className="flex items-center justify-between w-full pr-10 space-y-5 ">
-        <div className="w-[150vm] h-[150vm] w-f ull mx-auto absolute top-80 left-50">
-          <Image alt='texture' src="/assets/texture.png" height={500} width={500} />
+        <div className="w-[150vm] h-[150vm] w-f ull mx-auto absolute top-110 left-50">
+          <Image alt='texture' src="/assets/texture.png" className="shades" height={500} width={500} />
         </div>
 
 

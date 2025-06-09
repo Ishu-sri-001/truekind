@@ -12,7 +12,6 @@
   --color-foreground: var(--foreground);
   --font-display:var(--font-display);
   --font-body:var(--font-body);
-  
 }
 
 body {
@@ -21,4 +20,33 @@ body {
 
  .font-heading {
     font-family: var(--font-body);
+}
+
+.link {
+  position: relative;
+  width: fit-content;
+  display: inline-block;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -5%;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  height: 1px; 
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.btn::after {
+    transition: transform 0.3s rase;
 }

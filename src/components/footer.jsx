@@ -1,15 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { MoveUpRight } from 'lucide-react';
+import Image from 'next/image';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+
+gsap.registerEase(ScrollTrigger);
 
 const Footer = () => {
+
+    useEffect(() => {
+        const ctx= gsap.context(() => {
+            gsap.to(".animated-image", {
+                yPercent: 20,
+                scrollTrigger: {
+                    trigger:'.image-container',
+                    start: "20% bottom",
+                    end: "bottom top",
+                    scrub: true,
+                    markers: false
+                }
+            })
+        })
+    return () => ctx.revert()
+    },[])
+
   return (
-    <div className='mt-32 '>
-        <div className='relative'>
-            <div>
-                <img src='/assets/footer.jpg' className='w-fll' />
+    <div className='pt-32 '>
+        <div className='relative '>
+            <div className='w-full h-[85vh] image-container'>
+                <Image src='/assets/footer.jpg' height={900} width={900} alt='footer-img' className='w-full h-full object-cover translate-y-[-10%] animated-image' />
             </div>
 
-            <div className='absolute bg-neutral-800 flex flex-col justify-between items-center -bottom-40  right-20'>
+            <div className='absolute bg-neutral-800 flex flex-col justify-between items-center -bottom-80  right-20'>
 
                 <div className='text-white font-body font-semibold flex flex-col w-[30rem] justify-between items-center text-5xl py-12'>
                     <p>HEAR MORE</p>
@@ -48,7 +70,7 @@ const Footer = () => {
                 
         </div>
 
-        <div className='flex pl-10 space-x-20 mt-10 font-body'>
+        <div className='flex pl-10 space-x-20 mt-16 font-body'>
 
             <div>
                 <p className='text-gray-600 text-[1.5vh] '>EXPLORE</p>

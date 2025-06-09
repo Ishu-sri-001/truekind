@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const  Journal = () => {
   return (
-    <div className='h-fit flex justify-between bg-neutral-800 w-fit py-20'>
+    <div className='h-fit flex justify-between bg-neutral-800 overflow-x-hidden py-20'>
 
         <div className='mx-10 bg-white relative pb-0' id='outer-div'>
             <div className='w-full h-[65vh] cursor-pointer'>
@@ -31,7 +31,7 @@ const  Journal = () => {
             </div>
         </div>
 
-        <div className='flex flex-col justify-center items-center py-16 mx-7'>
+        <div className='flex flex-col justify-center items-center py-16 pl-2 pr-4 '>
             
                 <div className='h-[35%] mb-10'>
                     <div className='text-white mx-auto '>
@@ -40,9 +40,9 @@ const  Journal = () => {
                     </div>
                      <p className='text-white font-body text-xs w-xs text-center mt-2'>Healty tips on skincare, regimen and overall a better lifestyle.</p>
                 </div>
-        <div className='flex flex-col h-[65%]'>
+        <div className='flex flex-col justify-between h-[65%] '>
         
-        <div  className='flex space-x-4'>
+        <div  className='flex space-x-2'>
         <div className='w-[52vh] bg-white h-fit'>
             <div className='w-[52vh] h-[35vh]'>
 

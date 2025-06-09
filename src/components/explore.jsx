@@ -1,6 +1,11 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import Button from './horizontal-btn';
+
+gsap.registerPlugin(ScrollTrigger);
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -60,16 +65,39 @@ const Explore = () => {
     }
   ];
 
+  useEffect (() => {
+
+    const ctx=gsap.context(() => {
+
+        
+        gsap.from(".animated-img", {
+            y: "10vw",
+            duration:2,
+            scrollTrigger: {
+                trigger: ".animated-img",
+                start: "top bottom",
+                end: "bottom top",
+                markers:false,
+                scrub:true
+            }
+        })
+    })
+    return()=>ctx.revert()
+  },[])
+
   return (
-    <div className='w-full h-fit mt-28'>
-        <div className='flex flex-col justify-center items-center text-neutral-700'>
+    <div className='w-full h-fit pt-28'>
+        <div className='flex flex-col justify-center items-center pb-12 text-neutral-700'>
             <h2 className='font-body font-semibold text-5xl'>EXPLORE</h2>
             <p className='font-display italic text-5xl'>pure potency</p>
         </div>
-        <div className='mt-16'>
+        
             <div className='grid grid-cols-2'>
-                <div className='h-[800px]'>
-                    <Image src='/assets/explore1.jpg' alt='explore' height={800} width={500} className='h-full w-full'  />
+                <div className='w-full h-full overflow-hidden'>
+                    
+
+                    <Image src='/assets/explore1.jpg' alt='explore' height={1000} width={600} className='h-full w-full object-cover animated-img'  />
+                    
                 </div>
                 <div className=''>
                     <div className='pt-16 w-full text-neutral-700 flex justify-between pl-10 pr-2 items-end'>
@@ -77,11 +105,7 @@ const Explore = () => {
                             <h2 className='font-body text-4xl'>Pure</h2>
                             <p className='italic font-display text-4xl'>Brilliance</p>
                         </div>
-                        <div>
-                            <p className='rounded-full cursor-pointer bg-gray-700 p-3'>
-                                <ArrowRight className='text-white'/>
-                            </p>
-                        </div>
+                        <Button />
                     </div>
 
                     
@@ -129,9 +153,7 @@ const Explore = () => {
                             <p className='italic font-display text-4xl'>Blends</p>
                         </div>
                         <div>
-                            <p className='rounded-full cursor-pointer bg-gray-700 p-3'>
-                                <ArrowRight className='text-white'/>
-                            </p>
+                            <Button />
                         </div>
                     </div>
 
@@ -169,21 +191,14 @@ const Explore = () => {
                     <div>
                         <p className='text-xs pt-10 pl-10 font-body w-xs text-gray-700'>STAY GLOW AND HEALHY WITHOUT HAVING TO THINK ABOUT IT</p>
                     </div>
-
+                </div>
                 </div>
 
-                </div>
-
-                <div className='h-[800px]'>
-                    <Image width={500} src='/assets/explore2.jpg' height={800} className='h-full w-full' alt='explore'  />
+                <div className='h-full w-full overflow-hidden'>
+                    <Image width={600} src='/assets/explore2.jpg' height={1000} className='h-full w-full object-cover animated-img' alt='explore'  />
                 </div>
 
             </div>
-
-        </div>
-
-
-
     </div>
   )
 }

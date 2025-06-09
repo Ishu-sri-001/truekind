@@ -1,5 +1,5 @@
 import React from 'react'
-import {MoveRight} from 'lucide-react'
+import Button from "@/components/horizontal-btn";
 
 const Hero = () => {
   return (
@@ -27,13 +27,12 @@ const Hero = () => {
     </div>
 
     <div className='absolute items-center bottom-10 w-full h-12 flex justify-center'>
-      <button className='bg-white w-1/2 h-12 rounded-4xl flex justify-between p-1 cursor-pointer'>
+      <div className='bg-white w-1/2 h-12 rounded-4xl flex justify-between p-1 cursor-pointer'>
       <p></p>
         <p className='underline font-light text-xs text-neutral-700 font-body flex justify-center items-center'>EXPLORE ALL PRODUCTS</p>
-        <div><p className='p-2 bg-neutral-700 rounded-full text-white'>
-          
-          <MoveRight /></p></div>
-      </button>
+        <div>
+          <Button /></div>
+      </div>
       
     </div>
 
