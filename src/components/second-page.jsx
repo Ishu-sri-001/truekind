@@ -53,13 +53,13 @@ const SecondPage = () => {
           }
       }),
       gsap.to(".moving-img", {
-          y:"10vw",
-          duration:5,
+          yPercent: 10,
+          // duration:5,
           scrollTrigger : {
-            start: "50% 70%",
-            end: "bottom 80%",
+            start: "top bottom",
+            end: "bottom top",
             trigger: ".moving-img",
-            markers:false,
+            // markers:true,
             scrub: true,
             
           }
@@ -68,8 +68,10 @@ const SecondPage = () => {
     return()=>ctx.revert()
   })
   return (
-    <div className="mt-20 h-fit pb-10 overflow-y-hidden overflow-x-hidden">
-      <div className="py-10 ml-16">
+    <div className="mt-20 h-fit pb-10 overflow-y-hidden overflow-x-hidden relative">
+      <div className="py-10 ml-16 flex">
+        <div>
+
         <h2 className="text-5xl font-body font-semibold text-neutral-700 max-w-lg">
           CLEAN, CONSIOUS, PERFORMANCE
         </h2>
@@ -82,6 +84,11 @@ const SecondPage = () => {
             skincare.
           </h2>
         </div>
+        </div>
+        <div className="w-fit h-[50vh] rotate-35 absolute right-40">
+              <Image src='/assets/svg/down-curved-arrow.svg' height={500} width={500} alt='curved-arrow' className="h-full w-full"/>
+        </div>
+       
       </div>
       
       <div className="w-full h-fit relative flex flex-col items-center justify-center">
@@ -110,7 +117,7 @@ const SecondPage = () => {
                 <div className="h-fit rounded-2xl w-52 bg-gray-100 absolute top-110 left-20 py-10 flex flex-col  justify-center items-center card-1 moving-elements">
                     <div className="mt-5 p-3 rounded-full bg-white w-12 "><Leaf /></div>
                      <div className="max-w-sm mx-2 flex flex-col  text-neutral-700 font-body">
-                      <h2 className="w-10 text-center text-sm font-semibold mt-8 mx-auto">Clean, Beyond Reproach</h2>
+                      <h2 className="w-[60%] text-center text-sm font-semibold mt-8 mx-auto">Clean, Beyond Reproach</h2>
                       <p className="text-xs mt-4 text-center">Truly clean with only verified ingredients; and free from over 1800 questionable ingredients. Because what you put on your skin matters.</p>
                   </div>
                 </div>

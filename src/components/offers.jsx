@@ -29,13 +29,13 @@ const Offers = () => {
 
 
   return (
-    <div className='flex min-h-[48rem] justify-between pt-36 overflow-y-hidden'>
+    <div className='flex min-h-[48rem] justify-between pt-36 overflow-y-hidden relative'>
 
-        <div className='pl-20 pt-20'>
+        <div className='pl-20 pt-20 z-50'>
             <div className=''>
                 <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[16rem] w-[32vh]' />
             </div>
-            <div className='mt-16'>
+            <div className='pt-16'>
                 <div className='w-fit px-4 text-[1.5vh] py-1 border border-gray-400 rounded-xl font-body'>
                     <p className='text-neutral-700 '>QUALITY</p>
                 </div>
@@ -48,6 +48,9 @@ const Offers = () => {
                     </p>
                 </div>
             </div>
+        </div>
+        <div className='w-fit h-[80vh] absolute top-70 -left-10'>
+            <Image src='/assets/svg/curved-arrow.svg' height={700} width={700} alt='arrow' />
         </div>
 
         <div>

@@ -8,11 +8,11 @@ const Header = ({ isScrolled = false }) => {
 
   return (
     <header>
-      <div className={`fixed z-50 w-full overflow-x-hidden overflow-y-hidden top-0 flex items-center justify-between h-16 px-5  ${
+      <div className={`fixed z-50 w-full overflow-x-hidden overflow-y-hidden top-0 flex items-center justify-between h-16 px-[4vw]  ${
         isScrolled ? 'bg-white' : ''
       }`}>
-        <div className='w-17 h-17 flex items-center'>
-            <Image src='/assets/logo.svg' height={800} width={800} alt='logo'/>
+        <div className='w-[7.5vw] h-auto flex items-center'>
+            <Image src='/assets/logo.svg' height={800} width={800} alt='logo' className='w-full h-full object-contain'/>
         </div>
         <div className={`flex items-center justify-around space-x-16 ${
           isScrolled ? 'text-black' : 'text-white'

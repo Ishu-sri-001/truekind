@@ -1,6 +1,6 @@
 import React from 'react';
-import { MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
+import Button from './btn';
 
 const  Journal = () => {
   return (
@@ -88,9 +88,7 @@ const  Journal = () => {
         </div>
 
         <div className='w-full flex flex-col justify-between cursor-pointer mt-4 items-center'>
-             <p className='rounded-full w-fit ml-2 p-3 bg-white'>
-                <MoveUpRight className='text-black'/>
-            </p>
+             <Button />
             <p className='font-body text-xs underline text-white mt-2'>SEE ALL</p>
         </div>
                       

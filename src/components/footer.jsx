@@ -3,7 +3,7 @@ import { MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
-
+import Button from './btn';
 gsap.registerEase(ScrollTrigger);
 
 const Footer = () => {
@@ -48,9 +48,7 @@ const Footer = () => {
 
             <div>
                 <div>
-                    <p className='rounded-full w-fit ml-2 p-4 bg-neutral-700 text-white cursor-pointer hover:bg-white hover:text-black'>
-                    <MoveUpRight className=''/>
-                    </p>
+                    <Button />
                     <p className='text-gray-300 text-xs font-body mt-4 underline hover:text-white cursor-pointer'>SUBSCRIBE</p>
                 </div>
                 
