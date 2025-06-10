@@ -41,18 +41,18 @@ const Connect = () => {
             </div>
 
             <div className='relative'>
-              <div className='w-[100vh] h-[75vh]'>
-                <Image src='/assets/face2.jpg' height={800} width={800} alt='face' className='' />
+              <div className='w-[100vh] h-[80vh]'>
+                <Image src='/assets/face2.jpg' height={800} width={800} alt='face' className='h-full w-full object-cover' />
               </div>
 
-              <div className='absolute top-0 flex justify-between items-stretch w-full flex-col h-full'>
+              <div className='absolute -top-20 flex justify-between items-stretch w-full flex-col h-full'>
                 <div className='flex flex-col justify-between text-center'>
 
                   <h2 className='text-neutral-700 text-5xl font-body font-semibold'>CONNECT</h2>
                   <h2 className='text-neutral-700 text-5xl font-body font-semibold'>WITH  US</h2>
                 </div>
               </div>
-              <div className='absolute -bottom-10 flex flex-col w-full justify-between items-center font-display text-center text-6xl text-neutral-700 italic'>
+              <div className='absolute bottom-40 flex flex-col w-full justify-between items-center font-display text-center text-6xl text-neutral-700 italic'>
                 
                   <h2>on</h2>
                   <h2>instagram</h2>

@@ -14,7 +14,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 
-import { ArrowRight, Lock } from 'lucide-react';
+import {  Lock } from 'lucide-react';
 
 const Explore = () => {
   const pureBrillianceProducts = [
@@ -87,7 +87,7 @@ const Explore = () => {
 
   return (
     <div className='w-full h-fit pt-28'>
-        <div className='flex flex-col justify-center items-center pb-12 text-neutral-700'>
+        <div className='flex flex-col justify-center items-center pb-12 text-neutral-700 leading-3'>
             <h2 className='font-body font-semibold text-5xl'>EXPLORE</h2>
             <p className='font-display italic text-5xl'>pure potency</p>
         </div>
@@ -109,19 +109,24 @@ const Explore = () => {
                     </div>
 
                     
-                    <div className=' pr-2 pl-4 mt-8'>
+                    <div className=' pr-2 mt-8'>
 
                         <Swiper
-                            slidesPerView={2.5}
-                            spaceBetween={10}
-                            className="mySwiper w-full"
+                            slidesPerView={2.2}
+                            spaceBetween={20}
+                            className="mySwiper w-full !pl-[3vw]"
                         >
                             {pureBrillianceProducts.map((product) => (
                                 <SwiperSlide key={product.id}>
-                                    <div className='h-fit w-[250px] p-2 bg-[#F0CCCE] rounded-xl min-h-[420px] cursor-pointer'>
+                                    <div className='h-fit w-full p-2 bg-[#F0CCCE] rounded-[1.2vw] cursor-pointer'>
                                         <div className='flex justify-between space-x-16'>
-                                            <p className='text-[1.5vh] p-1 bg-white rounded-lg font-body my-auto px-5'>PURE BRILLIANCE</p>
-                                            <p className='bg-white p-2 rounded-full'><Lock size={15} className=''/></p>
+                                            <p className='text-[1.5vh] p-1 bg-white rounded-full font-body my-auto px-5'>PURE BRILLIANCE</p>
+                                            <div className='bg-white rounded-full p-2'>
+                                                    <div className='h-[1vw] w-[1vw]'>
+
+                                                <Image src='/assets/cart.svg' height={500} width={500} alt='' className='w-full h-full object-fill'/>
+                                                    </div>
+                                                </div>
                                         </div>
                                         <div className='mx-auto'>
                                             <Image src={product.image} width={250} alt='product' height={250} />
@@ -137,7 +142,7 @@ const Explore = () => {
                     </div>
 
                     <div>
-                        <p className='text-xs pt-10 pl-10 font-extralight text-neutral-700 font-body w-xs'>STAY GLOW AND HEALTHY WITHOUT HAVING TO THINK ABOUT IT</p>
+                        <p className='text-xs pt-10 pl-12 font-extralight text-neutral-700 font-body w-xs'>STAY GLOW AND HEALTHY WITHOUT HAVING TO THINK ABOUT IT</p>
                     </div>
 
                 </div>
@@ -157,21 +162,26 @@ const Explore = () => {
                         </div>
                     </div>
 
-                    <div className='pl-10 pr-2 mt-8'>
+                    <div className='pr-12 mt-8'>
 
                         <Swiper
-                            slidesPerView={2.5}
+                            slidesPerView={2.2}
                             spaceBetween={10}
                             dir="rtl"
-                            className="mySwiper w-full"
+                            className="mySwiper w-full space-x-4"
                         >
                             {varnayaBlendsProducts.map((product) => (
                                 <SwiperSlide key={product.id}>
-                                    <div className='h-fit w-fit p-2 bg-[#D8CEC4] rounded-xl min-h-[420px] cursor-pointer'>
+                                    <div className='h-fit w-full p-2 bg-[#D8CEC4] rounded-xl min-h-[420px] cursor-pointer py-[1.5vw]'>
                                         <div className='flex justify-between space-x-16'>
                                             
-                                            <p className='bg-white p-2 rounded-full'><Lock size={15} className=''/></p>
-                                            <p className='text-[1.5vh] p-1 bg-white rounded-lg font-body my-auto px-5'>PURE BRILLIANCE</p>
+                                            <div className='bg-white rounded-full p-2'>
+                                                    <div className='h-[1vw] w-[1vw]'>
+
+                                                <Image src='/assets/cart.svg' height={500} width={500} alt='' className='w-full h-full object-fill'/>
+                                                    </div>
+                                                </div>
+                                            <p className='text-[1.5vh] p-1 bg-white rounded-full font-body my-auto px-5'>VARNAYAS BLENDS</p>
                                         </div>
                                         <div className='mx-auto'>
                                             <Image src={product.image} alt='product' width={250} height={250} />
@@ -189,7 +199,7 @@ const Explore = () => {
                     </div>
 
                     <div>
-                        <p className='text-xs pt-10 pl-10 font-body w-xs text-gray-700'>STAY GLOW AND HEALHY WITHOUT HAVING TO THINK ABOUT IT</p>
+                        <p className='text-xs pt-10 pl-10 font-body w-[20vw] text-gray-700'>STAY GLOW AND HEALHY WITHOUT HAVING TO THINK ABOUT IT</p>
                     </div>
                 </div>
                 </div>

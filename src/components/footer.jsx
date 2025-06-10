@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import { MoveUpRight } from 'lucide-react';
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
@@ -11,7 +10,7 @@ const Footer = () => {
     useEffect(() => {
         const ctx= gsap.context(() => {
             gsap.to(".animated-image", {
-                yPercent: 20,
+                yPercent: 30,
                 scrollTrigger: {
                     trigger:'.image-container',
                     start: "20% bottom",
@@ -27,7 +26,7 @@ const Footer = () => {
   return (
     <div className='pt-32 '>
         <div className='relative '>
-            <div className='w-full h-[85vh] image-container'>
+            <div className='w-full h-[85vh] image-container overflow-hidden'>
                 <Image src='/assets/footer.jpg' height={900} width={900} alt='footer-img' className='w-full h-full object-cover translate-y-[-10%] animated-image' />
             </div>
 

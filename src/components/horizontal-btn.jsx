@@ -4,12 +4,12 @@ import Image from 'next/image';
 const Button = () => {
   return (
     <div>
-      <button className='group rounded-full w-fit ml-2 p-2 bg-neutral-700 cursor-pointer transition-all btn duration-300 ease-in-out transform hover:scale-105 overflow-hidden rotate-45'>
-        <div className='relative h-5 w-5 flex flex-col gap-[1.5vw] translate-x-0 translate-y-0  group-hover:translate-x-[200%] group-hover:translate-y-[-200%] duration-300 ease-in-out'>
-          
-          <div className=''>
+      <button className='group rounded-full w-fit ml-2 p-3 bg-neutral-700 cursor-pointer transition-all btn duration-300 ease-in-out transform hover:scale-105 overflow-hidden'>
+        <div className='relative h-5 w-5 flex items-center justify-center'>
+        
+          <div className='absolute inset-0 flex items-center justify-center translate-x-0 group-hover:translate-x-[200%] duration-300 ease-in-out'>
             <Image 
-              src='/assets/svg/arrow-upper.svg' 
+              src='/assets/svg/straight-btn1.svg' 
               width={15} 
               height={15} 
               alt='Arrow up' 
@@ -17,12 +17,12 @@ const Button = () => {
             />
           </div>
           
-          
-          <div className='translate-x-[-200%] '>
+         
+          <div className='absolute inset-0 flex items-center justify-center translate-x-[-200%] group-hover:translate-x-0 duration-300 ease-in-out'>
             <Image 
-              src='/assets/svg/arrow-down.svg' 
-              width={20} 
-              height={20} 
+              src='/assets/svg/straight-btn1.svg' 
+              width={15} 
+              height={15} 
               alt='Arrow down' 
               className='w-full h-full'
             />

@@ -12,14 +12,14 @@ gsap.registerPlugin(ScrollTrigger)
 const Transparency = () => {
   const qualities = [
     {
-      icon: <FlaskRound />,
+      iconSrc: '/assets/svg/icon-highest-standards.svg',
       heading: "100% Transparent Formulas",
       subheading: "Highest Standards.",
       content:
         "We formulate to the highest standards of efficacyand safety – using only proven, verifiedingredients in bio-compatible bases; and freefrom over 1800 questionable ingredients",
     },
     {
-      icon: <MapPinCheckInside />,
+      iconSrc: '/assets/svg/icon-real-results.svg',
       heading: "Only Verified Ingredients",
       subheading: "Real Results.",
       content:
@@ -45,27 +45,37 @@ const Transparency = () => {
       <div className="w-full flex flex-col justify-center items-center mx-auto font-body text-neutral-700">
         <div className="flex items-end justify-baseline">
           <div className="mr-20 rounded-xl border border-gray-600 mb-10">
-            <p className="text-xs font-body px-7 py-1">ETHOS</p>
+            <p className="text-[8px] font-body px-10 py-1">ETHOS</p>
           </div>
           <h2 className="font-body text-9xl font-semibold">RADICAL</h2>
         </div>
         <h2 className="font-body text-9xl font-semibold">TRANSPARENCY.</h2>
       </div>
 
-      <div className="w-full flex flex-col justify-between text-neutral-700">
-        <div className="flex justify-center pr-[500px]">
-          <div className="flex items-start cursor-pointer mx-auto font-body text-neutral-700">
+      
+      <div className="w-full flex justify-between text-neutral-700">
+        <div className="w-[40%] pt-5">
+
+          <div className="flex items-start cursor-pointer pl-32 font-body text-neutral-700">
             <Button />
-            <div className="ml-2 font-body text-xs ">
+            <div className="ml-2 font-body text-[10px] my-auto">
               <p className="underline">OUR</p>
               <p className="underline">PHILOSOPHY</p>
             </div>
           </div>
-          <h2 className="font-display italic text-9xl">HIDE</h2>
+
         </div>
-        <h2 className="items-end font-body text-9xl font-semibold pl-[520px]">
+
+        <div className="w-[60%] leading-none">
+
+          <h2 className="font-display italic text-9xl">HIDE</h2>
+        
+          <h2 className="items-end font-body text-9xl font-semibold">
           NOTHING.
         </h2>
+
+        </div>
+
       </div>
 
       <div className="flex items-center justify-between w-full pr-10 space-y-5 ">
@@ -75,17 +85,20 @@ const Transparency = () => {
 
 
       <div className="flex items-end justify-end w-full">
-        <div className="flex flex-col items-start justify-between max-w-lg mt-20 mr-6 space-y-5">
+        <div className="flex flex-col items-start justify-between max-w-[40vw] mt-20 mr-6 space-y-5">
           {qualities.map((quality, index) => (
             <div
               key={index}
               className="flex justify-between items-center space-x-8"
             >
-              <p>{quality.icon}</p>
-              <h3 className="text-sm font-body">{quality.heading}</h3>
-              <div className="flex flex-col text-xs font-body pl-10">
-                <p className="font-semibold">{quality.subheading}</p>
-                <p className="font-extralight">{quality.content}</p>
+              
+              <div className="h-[3vh] w-[3vw] ">
+                <Image src={quality.iconSrc} height={600} width={600} alt='icon'/>
+              </div>
+              <h3 className="text-sm font-display max-w-[10vw]">{quality.heading}</h3>
+              <div className="flex flex-col text-xs font-body max-w-[18vw]">
+                <p className="font-normal">{quality.subheading}</p>
+                <p className="font-extralight text-gray-500">{quality.content}</p>
               </div>
             </div>
           ))}

@@ -114,35 +114,35 @@ const SecondPage = () => {
         </div>
        
           
-                <div className="h-fit rounded-2xl w-52 bg-gray-100 absolute top-110 left-20 py-10 flex flex-col  justify-center items-center card-1 moving-elements">
-                    <div className="mt-5 p-3 rounded-full bg-white w-12 "><Leaf /></div>
+                <div className="h-fit rounded-2xl w-52 bg-neutral-100 absolute top-110 left-20 py-10 flex flex-col  justify-center items-center card-1 moving-elements px-4 ">
+                    <div className="mt-5 p-3 rounded-full bg-white w-[6vw] h-fit "><Image src='/assets/svg/icon-clean-beyond-reproach.svg' height={700} width={700} alt='leaf'/></div>
                      <div className="max-w-sm mx-2 flex flex-col  text-neutral-700 font-body">
                       <h2 className="w-[60%] text-center text-sm font-semibold mt-8 mx-auto">Clean, Beyond Reproach</h2>
                       <p className="text-xs mt-4 text-center">Truly clean with only verified ingredients; and free from over 1800 questionable ingredients. Because what you put on your skin matters.</p>
                   </div>
                 </div>
 
-                <div id='card2' className="h-fit rounded-2xl w-52 py-10 bg-gray-100 absolute top-70 left-80 flex flex-col card-2 justify-center items-center moving-elements">
-                     <div className="mt-5 p-3 rounded-full bg-white w-12 "><Search /></div>
+                <div id='card2' className="h-fit rounded-2xl w-52 py-10 bg-neutral-100 absolute top-70 left-80 flex flex-col card-2 justify-center items-center moving-elements px-4">
+                     <div className="mt-5 p-3 rounded-full bg-white w-[6vw] h-fit "><Image src='/assets/svg/icon-radical-transparency.svg' height={700} width={700} alt='leaf'/></div>
                      <div className="max-w-sm mx-2 flex flex-col text-neutral-700 font-body">
-                      <h2 className="px-1 text-center text-sm font-semibold mt-8 mx-auto">Radical Transparency</h2>
+                      <h2 className="w-[60%] px-1 text-center text-sm font-semibold mt-8 mx-auto">Radical Transparency</h2>
                       <p className="text-xs mt-4 text-center">No black boxes, nothing to hide, we disclose our full formulas, so you will never have to guess what's in it and how much.</p>
                      </div>
                 </div>
 
-                <div id='card3' className="h-fit rounded-2xl w-52 absolute right-90 -bottom-20 bg-gray-100 mt-[650px] py-10 flex flex-col justify-center items-center card-3 moving-elements">
-                  <div className="mt-5 p-3 rounded-full bg-white w-12 "><FlaskConical /></div>
+                <div id='card3' className="h-fit rounded-2xl w-52 absolute right-90 -bottom-20 bg-neutral-100 mt-[650px] py-10 flex flex-col justify-center items-center card-3 moving-elements px-4">
+                  <div className="mt-5 p-3 rounded-full bg-white w-[6vw] h-fit "><Image src='/assets/svg/icon-potent-multi-tasking.svg' height={700} width={700} alt='leaf'/></div>
                      <div className="max-w-sm mx-2 flex flex-col text-neutral-700 font-body">
-                      <h2 className="px-1 text-center text-sm font-semibold mt-8">Potent & Multi Tasking</h2>
+                      <h2 className="w-[60%] px-1 text-center text-sm font-semibold mt-8 mx-auto">Potent & Multi Tasking</h2>
                       <p className="text-xs mt-4 text-center">Our formulas are chock-a-block with actives, anti oxidants, skin restoring agents backed by dermal science that aim to deliver real results.</p>
                   </div>
                 </div>
 
-                <div id='card4' className="h-fit rounded-2xl w-52 absolute bottom-right-100 bottom-30 right-30 bg-gray-100 mt-[450px] py-10 flex flex-col justify-center items-center card-4 moving-elements">
-                  <div className="mt-5 p-3 rounded-full bg-white w-12 "><HandHeart /></div>
+                <div id='card4' className="h-fit rounded-2xl w-52 absolute bottom-right-100 bottom-30 right-30 bg-neutral-100 mt-[450px] py-10 flex flex-col justify-center items-center card-4 moving-elements px-4">
+                  <div className="mt-5 p-3 rounded-full bg-white w-[6vw] h-fit "><Image src='/assets/svg/icon-conscious-responsible.svg' height={700} width={700} alt='leaf'/></div>
                      <div className="max-w-sm mx-2 flex flex-col font-body text-neutral-700">
-                      <h2 className="px-1 text-center text-sm font-semibold  mt-8">Conscious & Responsible</h2>
-                      <p className="text-xs mt-4 text-center">Peta Certified Vegan and Cruelty Free. Our products are always housed in responsible packaging and made sustainably.</p>
+                      <h2 className="w-[60%] px-1 text-center text-sm font-semibold mt-8 mx-auto">Conscious & Responsible</h2>
+                      <p className="text-xs mt-4 text-center font-light">Peta Certified Vegan and Cruelty Free. Our products are always housed in responsible packaging and made sustainably.</p>
                   </div>
                 </div>
 
