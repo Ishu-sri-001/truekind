@@ -9,14 +9,17 @@ const Footer = () => {
 
     useEffect(() => {
         const ctx= gsap.context(() => {
-            gsap.to(".animated-image", {
-                yPercent: 30,
+            gsap.fromTo(".animated-image", {
+                yPercent:-30,
+            }, {
+                yPercent: 20,
+                ease:"none",
                 scrollTrigger: {
                     trigger:'.image-container',
-                    start: "20% bottom",
+                    start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                    markers: false
+                    markers: true
                 }
             })
         })
@@ -25,14 +28,14 @@ const Footer = () => {
 
   return (
     <div className='pt-32 '>
-        <div className='relative '>
-            <div className='w-full h-[85vh] image-container overflow-hidden'>
-                <Image src='/assets/footer.jpg' height={900} width={900} alt='footer-img' className='w-full h-full object-cover translate-y-[-10%] animated-image' />
+        <div className='relative bg-black  '>
+            <div className='w-full h-[80vh] image-container overflow-hidden'>
+                <Image src='/assets/footer.jpg' height={1080} width={1920} alt='footer-img' className='w-full h-full scale-[1.2] object-cover animated-image' />
             </div>
 
             <div className='absolute bg-neutral-800 flex flex-col justify-between items-center -bottom-80  right-20'>
 
-                <div className='text-white font-body font-semibold flex flex-col w-[30rem] justify-between items-center text-5xl py-12'>
+                <div className='text-white font-body font-semibold flex flex-col w-[30rem] justify-between items-center text-[3.5vw] py-12'>
                     <p>HEAR MORE</p>
                     <p>FROM US</p>
                     <p className='font-body font-light text-gray-300 mt-4 text-xs w-xs text-center '>Get the latest news about skincare tips and new products.</p>

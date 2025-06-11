@@ -1,7 +1,6 @@
 'use client';
 
 import React from "react";
-import { FlaskRound, MapPinCheckInside } from "lucide-react";
 import Button from "./btn";
 import Image from "next/image";
 import { useEffect } from "react";
@@ -27,29 +26,49 @@ const Transparency = () => {
     },
   ];
 
-  useEffect (() => {
-      gsap.to(".shades", {
-           y: "-20vw",
+  useEffect(() => {
+        const ctx= gsap.context(() => {
+              gsap.to(".shades", {
+           y: "-80vh",
           scrollTrigger: {
-            start: 'top 80%',
+            start: 'top bottom',
             end: 'bottom top',
-            trigger: ".shades",
+            trigger: ".shades-container",
             markers: false,
             scrub: true
           }
-      })
-  })
+      }),
+        gsap.from(".third1 , .third2 , .third3 , .third4 ",{      
+                    yPercent: 100,
+                    stagger:0.5,
+                    scrollTrigger:{
+                        trigger:".hit-point",
+                        start:"top 90%",
+                        markers:false
+                    }
+        })
+        })
+  return()=>ctx.revert()
+  },[])
+
+  
 
   return (
     <div className="h-fit w-full relative py-24">
-      <div className="w-full flex flex-col justify-center items-center mx-auto font-body text-neutral-700">
-        <div className="flex items-end justify-baseline">
+      <div className="w-full flex flex-col justify-center items-center mx-auto font-body text-neutral-700 hit-point">
+        <div className="flex items-end justify-baseline  ">
           <div className="mr-20 rounded-xl border border-gray-600 mb-10">
             <p className="text-[8px] font-body px-10 py-1">ETHOS</p>
           </div>
-          <h2 className="font-body text-9xl font-semibold">RADICAL</h2>
+          <div className="w-fit h-fit overflow-hidden ">
+
+          <h2 className="font-body text-9xl font-semibold third1">RADICAL</h2>
+          </div>
         </div>
-        <h2 className="font-body text-9xl font-semibold">TRANSPARENCY.</h2>
+        <div className="w-fit h-fit overflow-hidden">
+
+        <h2 className="font-body text-9xl font-semibold third2">TRANSPARENCY.</h2>
+        </div>
       </div>
 
       
@@ -68,19 +87,25 @@ const Transparency = () => {
 
         <div className="w-[60%] leading-none">
 
-          <h2 className="font-display italic text-9xl">HIDE</h2>
-        
-          <h2 className="items-end font-body text-9xl font-semibold">
+          <div className="h-fit w-fit overflow-hidden pt-2">
+
+
+          <h2 className="font-display italic text-9xl third3">HIDE</h2>
+          </div>
+
+          <div className="h-fit w-fit overflow-hidden pt-2">
+          <h2 className="items-end font-body text-9xl font-semibold third4">
           NOTHING.
         </h2>
+          </div>
 
         </div>
 
       </div>
 
       <div className="flex items-center justify-between w-full pr-10 space-y-5 ">
-        <div className="w-[150vm] h-[150vm] w-f ull mx-auto absolute top-110 left-50">
-          <Image alt='texture' src="/assets/texture.png" className="shades" height={500} width={500} />
+        <div className="h-auto w-[35vw] mx-auto absolute top-[60%] left-[20%] shades-container ">
+          <Image alt='texture' src="/assets/texture.png" className="shades w-full h-full object-contain" height={500} width={500}  />
         </div>
 
 

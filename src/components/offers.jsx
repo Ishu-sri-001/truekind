@@ -5,6 +5,8 @@ import Button from "@/components/btn"
 import Image from 'next/image';
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+import SplitText from 'gsap/dist/SplitText';
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -21,18 +23,27 @@ const Offers = () => {
                     markers: false,
                     scrub: true,
                 }
-            })
+            }),
+
+          gsap.from(".fourth1 , fourth2",{      
+                              yPercent: 100,
+                              stagger:0.5,
+                              scrollTrigger:{
+                                  trigger:".hitt-point",
+                                  start:"top 70%",
+                                  markers:false
+                              }
+                  })
         })
+        
         return () => ctx.revert()
     },[])
-    
-
 
   return (
     <div className='flex min-h-[48rem] justify-between pt-36 overflow-y-hidden relative'>
 
         <div className='pl-20 pt-20 z-50'>
-            <div className=''>
+            <div className='hitt-point'>
                 <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[16rem] w-[32vh]' />
             </div>
             <div className='pt-16'>
@@ -52,9 +63,7 @@ const Offers = () => {
         <div className='w-fit h-[80vh] absolute top-70 -left-10'>
             <Image src='/assets/svg/curved-arrow.svg' height={700} width={700} alt='arrow' />
         </div>
-
         <div>
-
             <div className='h-[100vh] w-[45vw] img-container relative overflow-hidden bg-[#E3D8CB] p-[3.5vw] '>
                 <div className='h-full w-full absolute top-0 left-0 '>
                 <Image src='/assets/product-with-bg.jpg' width={650} height={500} alt='product' className='w-full translate-y-[-10%] h-full object-cover animated-img' />
@@ -64,9 +73,25 @@ const Offers = () => {
                 <div className='relative z-[2]'>
                 <div className='flex justify-between items-end'>
 
-                <div className='font-body text-neutral-700'>
-                    <h2 className='text-5xl font-semibold'>EXCITING </h2>
-                    <h2 className='text-5xl font-semibold'>OFFERS <span className='font-display italic font-light'>awaits</span></h2>
+                <div className='font-body text-neutral-700 h-fit w-fit overflow-hidden'>
+                    
+
+                    <h2 className='text-[3.5vw] font-semibold fourth1 leading-[1] '>
+                        <div className='h-fit w-fit overflow-hidden '>
+                                <span className='inline-block fourth1'>
+
+                        EXCITING 
+                                </span>
+                        </div>
+                        <div>
+                            <span className='text-[3.5vw] font-semibold fourth2'>OFFERS <span className='font-display italic font-light inline-block fourth2'>awaits</span></span>
+                        </div>
+                        </h2>
+                    
+                    <div className='h-fit w-fit overflow-hidden'>
+
+                    
+                    </div>
                     <div className='text-xs text-gray-500 mt-2'>
                         <p>Shop now to get a chance to win 2 extra products.</p>
                         <p>Grab the offer before it ends</p>

@@ -4,11 +4,11 @@ import Image from 'next/image';
 
 const Header = ({ isScrolled = false }) => {
 
-  const navLinks= ["SHOP", "PHILOSOPHY", "GALLARY","JOURNAL"];
+  const navLinks= ["SHOP", "PHILOSOPHY", "GALLERY","JOURNAL"];
 
   return (
     <header>
-      <div className={`fixed z-50 w-full overflow-x-hidden overflow-y-hidden top-0 flex items-center justify-between h-16 px-[4vw]  ${
+      <div className={`fixed z-50 w-full overflow-x-hidden overflow-y-hidden top-0 flex items-center justify-between h-[10vh] px-[4vw]  ${
         isScrolled ? 'bg-white' : ''
       }`}>
         <div className='w-[7.5vw] h-auto flex items-center'>
@@ -19,7 +19,7 @@ const Header = ({ isScrolled = false }) => {
         }`}>
           
           {navLinks.map((links) => (
-              <Link key={links} className='font-heading font-semibold text-[9px] link' href='./'>{links} </Link>
+              <Link key={links} className='font-heading font-medium text-[0.7vw] link' href='./'>{links} </Link>
           ))}
 
         </div>

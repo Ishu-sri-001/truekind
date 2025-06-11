@@ -13,7 +13,6 @@ const Connect = () => {
       gsap.fromTo(".face-img",{
         yPercent:50
       }, {
-          // y:"-10vw",
           yPercent:-50,
           scrollTrigger: {
             trigger: ".face-img",
@@ -22,6 +21,16 @@ const Connect = () => {
             scrub:true,
             markers:false
           }
+      }),
+
+      gsap.from(".sixth1 ",{      
+        yPercent: 100,
+        stagger:0.5,
+        scrollTrigger:{
+        trigger:".hit-point-connect",
+        start:"top 50%",
+        markers:false
+        }
       })
 
     })
@@ -33,7 +42,7 @@ const Connect = () => {
         <div className='flex justify-between mt-28'>
 
             <div className='p-12 pt-0 mt-10 flex flex-col justify-between items-start h-full'>
-                <div className='w-[15vw] h-[23vh] face-img'>
+                <div className='w-[15vw] h-[23vh] face-img hit-point-connect'>
 
                 <Image src="/assets/face1.jpg" height={800} width={800} alt='face' className='w-full h-full object-cover' />
                 </div>
@@ -46,16 +55,45 @@ const Connect = () => {
               </div>
 
               <div className='absolute -top-20 flex justify-between items-stretch w-full flex-col h-full'>
-                <div className='flex flex-col justify-between text-center'>
+                <div className='flex flex-col justify-between items-center '>
+                
 
-                  <h2 className='text-neutral-700 text-5xl font-body font-semibold'>CONNECT</h2>
-                  <h2 className='text-neutral-700 text-5xl font-body font-semibold'>WITH  US</h2>
+                  <h2 className='text-neutral-700 text-[3.5vw] font-body font-semibold leading-[1] text-center mx-auto'>
+                    
+                    <div className='w-fit h-fit overflow-hidden text-center mx-auto'> 
+                      <span className='inline-block sixth1'>CONNECT</span>
+                      </div>
+
+                      <div className='h-fit w-fit overflow-hidden pl-6'>
+                        <span className='text-neutral-700 font-body font-semibold sixth1 inline-block '>WITH  US</span>
+                      </div>
+                      
+                      </h2>
+                
+                <div className='w-fit h-fit overflow-hidden  text-center mx-auto'>
+
+                  
+                </div>
                 </div>
               </div>
               <div className='absolute bottom-40 flex flex-col w-full justify-between items-center font-display text-center text-6xl text-neutral-700 italic'>
+
+                <div className=' '>
+
                 
-                  <h2>on</h2>
-                  <h2>instagram</h2>
+                  <h2 className=' leading-[0.7] justify-between items-center pt-2 pr-2 text-center mx-auto'>
+                    <div className='h-fit w-fit overflow-hidden'>
+                      <span className='inline-block pl-16 pr-2 sixth1'>on</span>
+                    </div>
+                    <div className='w-fit h-fit overflow-hidden pt-2 pr-2 pb-2 text-center mx-auto'>
+
+                
+                  <span className=' sixth1 inline-block'>instagram</span>
+                </div>
+                    </h2>
+                </div>
+
+                  
                 
               </div>
 
