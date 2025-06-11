@@ -70,7 +70,7 @@ const Transparency = () => {
   
 
   return (
-    <div className="h-fit w-full relative py-24">
+    <div className="h-fit w-full relative py-[20vw]">
       <div className="w-full flex flex-col justify-center items-center mx-auto font-body text-neutral-700 hit-point">
         <div className="flex items-end justify-baseline  ">
           <div className="mr-20 rounded-xl border border-gray-600 mb-10">

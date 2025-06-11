@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import LenisSmoothScroll from "@/components/scroll";
+import { Weight } from "lucide-react";
 
 const EditorialNewRegular = localFont({
   src: [
@@ -30,6 +31,18 @@ const PPMoriRegular = localFont({
   variable: "--font-body",
 });
 
+const EditorialNewItalic = localFont({
+  src: [
+    {
+
+      path: './fonts/EditorialNew-italic.woff2',
+      weight: "200",
+      style: "normal"
+    },
+  ],
+  variable:"--font-italic"
+})
+
 export const metadata: Metadata = {
   title: "TrueKind",
   description: "TrueKind skincare",
@@ -45,7 +58,7 @@ export default function RootLayout({
       <LenisSmoothScroll />
       <html lang="en">
         <body
-          className={`${EditorialNewRegular.variable} ${PPMoriRegular.variable}`}
+          className={`${EditorialNewRegular.variable} ${PPMoriRegular.variable} ${EditorialNewItalic.variable}`}
         >
           {children}
         </body>

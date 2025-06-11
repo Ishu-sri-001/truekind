@@ -36,7 +36,7 @@ const Offers = () => {
                               scrollTrigger:{
                                   trigger:".hitt-point",
                                   start:"top 70%",
-                                  markers:false
+                                  markers:true
                               }
                   })
         })
@@ -89,7 +89,7 @@ const Offers = () => {
                                 </span>
                         
                         
-                            <span className='text-[3.5vw] font-semibold '>OFFERS <span className='font-display italic font-light inline-block pr-2'>awaits</span></span>
+                            <span className='text-[3.5vw] font-semibold text-nowrap'>OFFERS <span className='font-italics font-light inline-block pr-2 '>awaits</span></span>
                         
                         </h2>
                     
@@ -106,7 +106,7 @@ const Offers = () => {
                 <div className='ml-28'>
                     
                         <Button />
-                        <p className='underline text-neutral-700 text-xs mt-2 font-body cursor-pointer'>SHOP NOW</p>
+                        <p className='underline text-neutral-700 text-[0.9vw] leading-[1] text-nowrap mt-2 font-body cursor-pointer'>SHOP NOW</p>
                     
                 </div>
                 </div>

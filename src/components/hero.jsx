@@ -61,9 +61,9 @@ const Hero = () => {
 
       <div>
         <div className="relative pt-[25vh] z-10 flex justify-center items-center w-full text-white text-[5.7vw] flex-col">
-          <div className="w-[40%] h-fit overflow-hidden flex justify-center">
-            <h1 className="w-full text-center leading-[1.1] split-animation">
-              True to Oneself kind to Nature
+          <div className="w-[50%] h-fit overflow-hidden flex justify-center">
+            <h1 className="w-full text-center leading-[1] split-animation font-body tracking-[1] font-semibold">
+              <span className="inline-block font-italics font-normal">True </span> to Oneself kind to <span className="font-italics font-normal"> Nature</span>
             </h1>
           </div>
 
@@ -76,14 +76,17 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="absolute items-center bottom-10 w-full h-12 flex justify-center">
-        <div className="bg-white animated-bar w-1/2 h-fit rounded-full flex justify-between p-[0.5vw] cursor-pointer nav-animate">
-          <p></p>
-          <p className="underline font-light text-xs text-neutral-700 font-body flex justify-center items-center">
+      <div className="absolute items-center bottom-10 w-full h-[2.5vw] flex justify-center">
+        <div className="bg-white animated-bar w-1/2 h-fit rounded-full flex  p-[0.5vw] cursor-pointer nav-animate">
+          <p className="w-[40%]"></p>
+          <div className="w-[60%] flex justify-between">
+
+          <p className="underline font-light text-[0.9vw] text-neutral-700 font-body flex justify-center items-center">
             EXPLORE ALL PRODUCTS
           </p>
-          <div className="my-auto">
+          <div className="">
             <Button />
+          </div>
           </div>
         </div>
       </div>

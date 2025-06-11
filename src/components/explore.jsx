@@ -138,12 +138,12 @@ const Explore = () => {
         <div className='flex flex-col justify-center items-center pb-[5vh] text-neutral-700 '>
             <div className='h-fit w-fit  pt-2 pr-2'>
 
-            <h2 className='font-body font-semibold leading-[1.2] text-center items-center flex flex-col text-[3.5vw] animated-txt3 explore-split-heading'>
+            <h2 className='font-body font-semibold leading-[1] text-center items-center flex flex-col text-[4vw] animated-txt3 explore-split-heading'>
                 
                     <span className='first-heading block'>Explore</span>
                     
                 
-                    <span className='font-display italic font-normal second-heading block pr-[0.5vw]'>Pure Potency</span>
+                    <span className='font-italics font-medium second-heading block pr-[0.5vw] pb-[0.5vw]'>pure potency</span>
                    
 
 
@@ -174,7 +174,7 @@ const Explore = () => {
                                     
                                     
 
-                            <span className='italic font-display inline-block text-[3vw] first-heading p-[0.4vw]'>Brilliance</span>
+                            <span className='font-italics inline-block text-[3vw] first-heading p-[0.4vw]'>Brilliance</span>
                             
                                 
                                 </h2>
@@ -193,7 +193,7 @@ const Explore = () => {
                         <Swiper
                             slidesPerView={2.2}
                             spaceBetween={20}
-                            className="mySwiper w-full !pl-[3vw]"
+                            className="mySwiper w-full !pl-[3vw] !pr-[3vw]"
                         >
                             {pureBrillianceProducts.map((product) => (
                                 <SwiperSlide key={product.id}>
@@ -244,7 +244,7 @@ const Explore = () => {
                                 
 
                                 
-                                    <span className='italic font-display second-txtt text-[3vw] inline-block p-2'>Blends</span>
+                                    <span className='font-italics second-txtt text-[3vw] inline-block p-2'>Blends</span>
                                 
                                 </h2>
                             </div>
@@ -262,11 +262,11 @@ const Explore = () => {
                             slidesPerView={2.2}
                             spaceBetween={10}
                             dir="rtl"
-                            className="mySwiper w-full space-x-4 !pr-[3vw]"
+                            className="mySwiper w-full space-x-4 !pr-[3vw] !pl-[3vw]"
                         >
                             {varnayaBlendsProducts.map((product) => (
                                 <SwiperSlide key={product.id}>
-                                    <div className='w-full p-2 bg-[#D8CEC4]  relative   py-[1.2vw] h-[55vh] px-[0.9vw] rounded-[1.2vw] cursor-pointer flex overflow-hidden flex-col justify-between'>
+                                    <div className='w-full p-2 bg-[#D8CEC4]  relative py-[1.2vw] h-[55vh] px-[0.9vw] rounded-[1.2vw] cursor-pointer flex overflow-hidden flex-col justify-between'>
                                         <div className='flex justify-between relative z-[1] space-x-16'>
                                             <div className='bg-white rounded-full p-2'>
                                                     <div className='h-[1vw] w-[1vw]'>

@@ -109,7 +109,7 @@ const SecondPage = () => {
               the planet – no exceptions!
             </p>
             <div className="h-fit w-fit pt-2 overflow-hidden">
-              <h2 className="text-6xl text-neutral-700 italic font-display underline font-light second3 split-features-heading">
+              <h2 className="text-6xl text-neutral-700 font-italics pt-[1vw] pb-[1vw] underline font-light second3 split-features-heading">
                 skincare.
               </h2>
             </div>
