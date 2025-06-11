@@ -261,7 +261,7 @@ const Explore = () => {
                         <Swiper
                             slidesPerView={2.2}
                             spaceBetween={10}
-                           
+                            dir="rtl"
                             className="mySwiper w-full space-x-4 !pr-[3vw]"
                         >
                             {varnayaBlendsProducts.map((product) => (
@@ -281,9 +281,10 @@ const Explore = () => {
                                         <div className='mx-auto w-full h-full absolute top-0 left-0 z-0'>
                                             <Image src={product.image} width={250} alt='product' height={250}  className='w-full h-full object-contain'/>
                                         </div>
-                                        <div className='flex gap-[3vw] justify-around items-start text-[0.7vw] absolute bottom-[5%] left-[5%] font-extralight mt-5 font-body text-neutral-700 space-x-10'>
-                                            <p className='w-[80%] '>{product.title}</p>
-                                            <p className='w-[30%]'>{product.price}</p>
+                                        <div className='flex gap-[3vw] justify-around items-start text-[0.7vw] absolute bottom-[5%] left-[5%] font-extralight mt-5 font-body text-neutral-700 space-x-[1.5vw]'>
+                                            
+                                            <p className='w-[30%] pr-[0.5vw]'>{product.price}</p>
+                                            <p className='w-[80%] text-left'>{product.title}</p>
                                         </div>
                                     </div>
                                 </SwiperSlide>

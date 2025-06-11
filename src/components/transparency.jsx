@@ -93,7 +93,7 @@ const Transparency = () => {
 
           <div className="flex items-start cursor-pointer pl-32 font-body text-neutral-700">
             <Button />
-            <div className="ml-2 font-body text-[10px] my-auto">
+            <div className="ml-2 font-body text-[0.9vw] my-auto">
               <p className="underline">OUR</p>
               <p className="underline">PHILOSOPHY</p>
             </div>
@@ -103,10 +103,10 @@ const Transparency = () => {
 
         <div className="w-[60%] leading-none">
 
-          <div className="h-fit w-fit overflow-hidden pt-2">
+          <div className=" pt-2">
 
 
-          <h2 className="font-display italic text-9xl transparency-split-text">HIDE</h2>
+          <h2 className="font-display italic text-9xl transparency-split-text pr-[1vw]">HIDE</h2>
           </div>
 
           <div className="h-fit w-fit overflow-hidden pt-2">
