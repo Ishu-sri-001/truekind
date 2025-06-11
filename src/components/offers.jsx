@@ -8,24 +8,29 @@ import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import SplitText from 'gsap/dist/SplitText';
 
 
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const Offers = () => {
 
     useEffect(() => {
         const ctx= gsap.context(() => {
-            gsap.to(".animated-img", {
-                yPercent: 20,
+            const splitText = new SplitText(".offers-split-text", {
+                    type: "chars,lines",
+                    linesClass: "lines",
+                    mask: "lines",
+                });
+            gsap.fromTo(".animated-img",{yPercent:-20}, {
+                yPercent: 10,
                 scrollTrigger: {
                     trigger: '.img-container',
-                    start: "top bottom",
+                    start: "20% bottom",
                     end: "bottom top",
-                    markers: false,
+                    markers: true,
                     scrub: true,
                 }
             }),
 
-          gsap.from(".fourth1 , fourth2",{      
+          gsap.from(splitText.lines,{      
                               yPercent: 100,
                               stagger:0.5,
                               scrollTrigger:{
@@ -42,9 +47,9 @@ const Offers = () => {
   return (
     <div className='flex min-h-[48rem] justify-between pt-36 overflow-y-hidden relative'>
 
-        <div className='pl-20 pt-20 z-50'>
-            <div className='hitt-point'>
-                <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[16rem] w-[32vh]' />
+        <div className='pl-20 pt-20 z-50 hitt-point'>
+            <div className=''>
+                <Image src='/assets/dropper.jpg' height={500} width={500} alt='dropper' className='h-[38vh] w-[15vw]' />
             </div>
             <div className='pt-16'>
                 <div className='w-fit px-4 text-[1.5vh] py-1 border border-gray-400 rounded-xl font-body'>
@@ -64,8 +69,8 @@ const Offers = () => {
             <Image src='/assets/svg/curved-arrow.svg' height={700} width={700} alt='arrow' />
         </div>
         <div>
-            <div className='h-[100vh] w-[45vw] img-container relative overflow-hidden bg-[#E3D8CB] p-[3.5vw] '>
-                <div className='h-full w-full absolute top-0 left-0 '>
+            <div className='h-[100vh] w-[45vw] img-container relative overflow-hidden bg-[#E3D8CB] px-[3.5vw] py-[3vw]'>
+                <div className='h-full w-full absolute top-[20%] left-0 '>
                 <Image src='/assets/product-with-bg.jpg' width={650} height={500} alt='product' className='w-full translate-y-[-10%] h-full object-cover animated-img' />
 
                 </div>
@@ -73,26 +78,26 @@ const Offers = () => {
                 <div className='relative z-[2]'>
                 <div className='flex justify-between items-end'>
 
-                <div className='font-body text-neutral-700 h-fit w-fit overflow-hidden'>
+                <div className='font-body text-neutral-700 '>
                     
 
-                    <h2 className='text-[3.5vw] font-semibold fourth1 leading-[1] '>
-                        <div className='h-fit w-fit overflow-hidden '>
-                                <span className='inline-block fourth1'>
+                    <h2 className='text-[3.5vw] font-semibold offers-split-text leading-[1] '>
+                        
+                                <span className='inline-block 1'>
 
                         EXCITING 
                                 </span>
-                        </div>
-                        <div>
-                            <span className='text-[3.5vw] font-semibold fourth2'>OFFERS <span className='font-display italic font-light inline-block fourth2'>awaits</span></span>
-                        </div>
+                        
+                        
+                            <span className='text-[3.5vw] font-semibold '>OFFERS <span className='font-display italic font-light inline-block pr-2'>awaits</span></span>
+                        
                         </h2>
                     
                     <div className='h-fit w-fit overflow-hidden'>
 
                     
                     </div>
-                    <div className='text-xs text-gray-500 mt-2'>
+                    <div className='text-[0.7vw] text-gray-500 mt-2 offers-split-text'>
                         <p>Shop now to get a chance to win 2 extra products.</p>
                         <p>Grab the offer before it ends</p>
                     </div>

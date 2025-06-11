@@ -19,7 +19,7 @@ const Footer = () => {
                     start: "top bottom",
                     end: "bottom top",
                     scrub: true,
-                    markers: true
+                    markers: false
                 }
             })
         })
@@ -28,7 +28,7 @@ const Footer = () => {
 
   return (
     <div className='pt-32 '>
-        <div className='relative bg-black  '>
+        <div className='relative '>
             <div className='w-full h-[80vh] image-container overflow-hidden'>
                 <Image src='/assets/footer.jpg' height={1080} width={1920} alt='footer-img' className='w-full h-full scale-[1.2] object-cover animated-image' />
             </div>
@@ -36,9 +36,12 @@ const Footer = () => {
             <div className='absolute bg-neutral-800 flex flex-col justify-between items-center -bottom-80  right-20'>
 
                 <div className='text-white font-body font-semibold flex flex-col w-[30rem] justify-between items-center text-[3.5vw] py-12'>
-                    <p>HEAR MORE</p>
-                    <p>FROM US</p>
-                    <p className='font-body font-light text-gray-300 mt-4 text-xs w-xs text-center '>Get the latest news about skincare tips and new products.</p>
+                    <h2 className='leading-[1] text-center'>
+
+                    <span className='block'>HEAR MORE</span>
+                    <span className='inline-block'>FROM US</span>
+                    </h2>
+                    <p className='font-body font-light text-gray-300 mt-4 text-xs w-[15vw] text-center '>Get the latest news about skincare tips and new products.</p>
                 </div>
 
                

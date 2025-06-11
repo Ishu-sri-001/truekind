@@ -6,7 +6,8 @@ import Image from "next/image";
 import { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger)
+import SplitText from "gsap/dist/SplitText";
+gsap.registerPlugin(ScrollTrigger, SplitText)
 
 const Transparency = () => {
   const qualities = [
@@ -28,7 +29,12 @@ const Transparency = () => {
 
   useEffect(() => {
         const ctx= gsap.context(() => {
-              gsap.to(".shades", {
+          const splitText = new SplitText(".transparency-split-text", {
+                  type: "chars,lines",
+                  linesClass: "lines",
+                  mask: "lines",
+          });
+          gsap.to(".shades", {
            y: "-80vh",
           scrollTrigger: {
             start: 'top bottom',
@@ -38,16 +44,26 @@ const Transparency = () => {
             scrub: true
           }
       }),
-        gsap.from(".third1 , .third2 , .third3 , .third4 ",{      
+      gsap.from(splitText.lines, {
                     yPercent: 100,
-                    stagger:0.5,
+                    stagger:0.2,
                     scrollTrigger:{
                         trigger:".hit-point",
-                        start:"top 90%",
+                        start:"-10% bottom",
                         markers:false
                     }
         })
-        })
+      })
+        // gsap.from(".third1 , .third2 , .third3 , .third4 ",{      
+        //             yPercent: 100,
+        //             stagger:0.5,
+        //             scrollTrigger:{
+        //                 trigger:".hit-point",
+        //                 start:"top 90%",
+        //                 markers:false
+        //             }
+        // })
+        // })
   return()=>ctx.revert()
   },[])
 
@@ -62,12 +78,12 @@ const Transparency = () => {
           </div>
           <div className="w-fit h-fit overflow-hidden ">
 
-          <h2 className="font-body text-9xl font-semibold third1">RADICAL</h2>
+          <h2 className="font-body text-9xl font-semibold transparency-split-text">RADICAL</h2>
           </div>
         </div>
         <div className="w-fit h-fit overflow-hidden">
 
-        <h2 className="font-body text-9xl font-semibold third2">TRANSPARENCY.</h2>
+        <h2 className="font-body text-9xl font-semibold transparency-split-text">TRANSPARENCY.</h2>
         </div>
       </div>
 
@@ -90,11 +106,11 @@ const Transparency = () => {
           <div className="h-fit w-fit overflow-hidden pt-2">
 
 
-          <h2 className="font-display italic text-9xl third3">HIDE</h2>
+          <h2 className="font-display italic text-9xl transparency-split-text">HIDE</h2>
           </div>
 
           <div className="h-fit w-fit overflow-hidden pt-2">
-          <h2 className="items-end font-body text-9xl font-semibold third4">
+          <h2 className="items-end font-body text-9xl font-semibold transparency-split-text">
           NOTHING.
         </h2>
           </div>
@@ -114,14 +130,14 @@ const Transparency = () => {
           {qualities.map((quality, index) => (
             <div
               key={index}
-              className="flex justify-between items-center space-x-8"
+              className="flex justify-between items-start space-x-8"
             >
               
               <div className="h-[3vh] w-[3vw] ">
                 <Image src={quality.iconSrc} height={600} width={600} alt='icon'/>
               </div>
-              <h3 className="text-sm font-display max-w-[10vw]">{quality.heading}</h3>
-              <div className="flex flex-col text-xs font-body max-w-[18vw]">
+              <h3 className="text-[0.9vw] font-display max-w-[10vw]">{quality.heading}</h3>
+              <div className="flex flex-col text-[0.9vw] font-body max-w-[18vw]">
                 <p className="font-normal">{quality.subheading}</p>
                 <p className="font-extralight text-gray-500">{quality.content}</p>
               </div>
