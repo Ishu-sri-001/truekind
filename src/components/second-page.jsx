@@ -192,7 +192,7 @@ const SecondPage = () => {
 
         <div
           id="card3"
-          className="h-fit rounded-[1.5vw] w-[17vw] absolute right-90 -bottom-[25%] bg-neutral-100 mt-[650px] py-10 flex flex-col justify-center items-center card-3 moving-elements px-4"
+          className="h-fit rounded-[1.5vw] w-[17vw] absolute right-[28%] -bottom-[25%] bg-neutral-100 mt-[650px] py-10 flex flex-col justify-center items-center card-3 moving-elements px-4"
         >
           <div className="mt-5 p-3 rounded-full bg-white w-[6vw] h-fit ">
             <Image
