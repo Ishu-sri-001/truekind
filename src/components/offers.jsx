@@ -25,7 +25,7 @@ const Offers = () => {
                     trigger: '.img-container',
                     start: "20% bottom",
                     end: "bottom top",
-                    markers: true,
+                    // markers: true,
                     scrub: true,
                 }
             }),
