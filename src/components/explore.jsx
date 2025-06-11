@@ -143,7 +143,7 @@ const Explore = () => {
                     <span className='first-heading block'>Explore</span>
                     
                 
-                    <span className='font-display italic font-normal second-heading block'>Pure Potency</span>
+                    <span className='font-display italic font-normal second-heading block pr-[0.5vw]'>Pure Potency</span>
                    
 
 
