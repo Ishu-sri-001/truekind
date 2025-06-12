@@ -10,9 +10,19 @@ import Offers from "@/components/offers";
 import Journal from '@/components/journal';
 import Connect from "@/components/connect";
 import Footer from "@/components/footer";
+import Loader from '@/components/loader';
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 6800); 
+
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,17 +40,23 @@ export default function Home() {
 
   return (
     <>
-      <Header isScrolled={isScrolled} />
-      <div id="hero-section" className='overflow-x-hidden'>
-        <Hero/>
-      </div>
-      <SecondPage />
-      <Explore />
-      <Transparency />
-      <Offers />
-      <Journal />
-      <Connect />
-      <Footer />
-   </>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <>
+          <Header isScrolled={isScrolled} />
+          <div id="hero-section" className='overflow-x-hidden'>
+            <Hero />
+          </div>
+          <SecondPage />
+          <Explore />
+          <Transparency />
+          <Offers />
+          <Journal />
+          <Connect />
+          <Footer />
+        </>
+      )}
+    </>
   );
 }
