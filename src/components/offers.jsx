@@ -35,7 +35,7 @@ const Offers = () => {
                               scrollTrigger:{
                                   trigger:".hitt-point",
                                   start:"top 70%",
-                                  markers:true
+                                  markers:false
                               }
                   })
         })
