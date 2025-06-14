@@ -35,7 +35,7 @@ const EditorialNewItalic = localFont({
   src: [
     {
 
-      path: './fonts/EditorialNew-italic.woff2',
+      path: './fonts/EditorialNew-Italic.woff2',
       weight: "200",
       style: "normal"
     },
